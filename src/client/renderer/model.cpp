@@ -17,7 +17,7 @@ namespace yib {
 	}
 
 	std::vector<VkVertexInputAttributeDescription> Vertex::GetAttributeDescriptions() {
-		std::vector<VkVertexInputAttributeDescription> attribute_descriptions(2);
+		std::vector<VkVertexInputAttributeDescription> attribute_descriptions(3);
 
 		attribute_descriptions.at(0).binding = 0;
 		attribute_descriptions.at(0).location = 0;
@@ -29,10 +29,10 @@ namespace yib {
 		attribute_descriptions.at(1).format = VK_FORMAT_R32G32B32_SFLOAT;
 		attribute_descriptions.at(1).offset = offsetof(Vertex, normal);
 
-		attribute_descriptions.at(1).binding = 0;
-		attribute_descriptions.at(1).location = 2;
-		attribute_descriptions.at(1).format = VK_FORMAT_R32G32_SFLOAT;
-		attribute_descriptions.at(1).offset = offsetof(Vertex, uv);
+		attribute_descriptions.at(2).binding = 0;
+		attribute_descriptions.at(2).location = 2;
+		attribute_descriptions.at(2).format = VK_FORMAT_R32G32_SFLOAT;
+		attribute_descriptions.at(2).offset = offsetof(Vertex, uv);
 
 		return attribute_descriptions;
 	}
